@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>13</title> 
-    <style>
-        td {
-            border: solid red 1px;
-            width: 50px;
-            height: 1em;
-        }
-        tr {
-            border: solid 1px;
-            width: 100px;
-            height: 20px;
-        }
-    </style>   
+    <title>band</title>
     <script>
-        var a = 100;
-        var b = 100;
-        var c = 100;
-        // if a == b == c 
-        
+        var a = prompt('pirma trikampio krastine', '');
+        var b = prompt('antra trikampio krastine', '');
+        var c = prompt('trecia trikampio krastine', '');
+
+        if ((a * 1) == (b * 1) && (b * 1) == (c * 1)) {
+            alert('lygiakrastis');
+        }
+        else if ((a * 1) == (b * 1) || (b * 1) == (c * 1) || (c * 1) == (a * 1)) {
+            alert('lygiasonis');
+        }
+        else if ((a * 1) != (b * 1) && (b * 1) != (c * 1) && (c * 1) != (a * 1)) {
+            alert('ivairiakrastis');
+        }
+
     </script>
+
+
 </head>
+
 <body>
-    <tbody>
-        <table>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-        </table>
-    </tbody>
-       
+
 </body>
+
 </html>
