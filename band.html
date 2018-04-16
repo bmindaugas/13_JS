@@ -5,46 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>band</title> 
-    <style>
-        td {
-            border: solid red 1px;
-            width: 50px;
-            height: 1em;
+    <script>
+        var a = prompt('pirma trikampio krastine','');
+        var b = prompt('antra trikampio krastine','');
+        var c = prompt('trecia trikampio krastine','');
+
+        if (a == b == c) {
+            alert('lygiakrastis');
         }
-        tr {
-            border: solid 1px;
-            width: 100px;
-            height: 20px;
-        }
-    </style>   
+    
+    </script>
+ 
     
 </head>
-<body>  
-
-    <tbody>
-        <table>
-            <tr>
-                <td id="a">100</td>
-                <td id="b">100</td>
-                <td id="c">100</td>
-                <td id="d">100</td>
-            </tr>
-        </table>
-        <script>
-            
-          var a = document.getElementById("a");
-          a.innerHTML = 'a';
-
-          var b = document.getElementById("b");
-          b.innerHTML = 'b';
-
-          var c = document.getElementById("c");
-          c.innerHTML = 'c';
-
-          var d = document.getElementById("d");
-          d.innerHTML = 'd';
-        </script>
-    </tbody>
+<body>   
        
 </body>
 </html>
