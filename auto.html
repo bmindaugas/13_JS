@@ -8,7 +8,7 @@
     
 </head>
 <body>
-    <table id="t">
+    <table border>
         <thead>
             <tr>
                 <td>Laikas</td>
@@ -18,7 +18,7 @@
                 <td>KmH</td>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody id="t"></tbody>
     </table>
        <script>
            
@@ -28,8 +28,14 @@
        ['2018-01-03', 'AAA002', 100000, 3600],
        ['2018-01-04', 'AAA003', 100000, 3600]
        ]
-        var table = document.getElementById ("t")
-       .innerHTML = a ;
+        var tbody = document.getElementById ("t");
+        for (i = 0; i < a.length; i++) {
+            tbody.innerHTML += '<tr>' + '<td>' + a[i][0] + '</td>' + '</tr>';
+        }
+        
+        for (i = 0; i < a.length; i++){
+        tbody.innerHTML += '<tr>' + '<td>' + a[i][1] + '</td>' + '</tr>';
+        }
 
     </script>
 </body>
