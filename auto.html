@@ -10,7 +10,7 @@
 <body>
     <table border>
         <thead>
-            <tr>
+            <tr id="t">
                 <td>Laikas</td>
                 <td>ValNr</td>
                 <td>Metrai</td>
@@ -18,24 +18,49 @@
                 <td>KmH</td>
             </tr>
         </thead>
-        <tbody id="t"></tbody>
+        <tbody></tbody>
     </table>
        <script>
            
-       var a = [
-       ['2018-01-01', 'AAA000', 100000, 3600],
-       ['2018-01-02', 'AAA001', 100000, 3600],
-       ['2018-01-03', 'AAA002', 100000, 3600],
-       ['2018-01-04', 'AAA003', 100000, 3600]
-       ]
-        var tbody = document.getElementById ("t");
-        for (i = 0; i < a.length; i++) {
-            tbody.innerHTML += '<tr>' + '<td>' + a[i][0] + '</td>' + '</tr>';
-        }
+       var automobilis1 = {
+           Laikas   : ['2018-01-01'],
+           ValNr    : ['AAA000'],
+           Metrai   : [100000],
+           Sekundes : [3600],
+       }
+       var automobilis1 = {
+           Laikas   : ['2018-01-02'],
+           ValNr    : ['AAA001'],
+           Metrai   : [100000],
+           Sekundes : [3600],
+       }
+       var automobilis1 = {
+           Laikas   : ['2018-01-03'],
+           ValNr    : ['AAA002'],
+           Metrai   : [100000],
+           Sekundes : [3600],
+       }
+       var automobilis1 = {
+           Laikas   : ['2018-01-04'],
+           ValNr    : ['AAA003'],
+           Metrai   : [100000],
+           Sekundes : [3600],
+       }
+       
+       for ( i=0; i < automobilis1.lenght; i++ ) {           
+        document.getElementById ("t").innerHTML += '<tr>' + '<td>' + automobilis1[i][0] + '</tr>' + '</td>';
+       }
+
+
+        // var tbody = document.getElementById ("t");
+        // for (i = 0; i < a.length; i++) {
+        //     tbody.innerHTML += '<tr>' + '<td>' + a[i][0] + '</td>' + '</tr>';
+        // }
+        // var tbody = document.getElementById ("t");
+        // for (i = 0; i < a.length; i++){
+        // tbody.innerHTML += '<tr>' + '<td>' + a[i][1] + '</td>' + '</tr>';
+        // }
         
-        for (i = 0; i < a.length; i++){
-        tbody.innerHTML += '<tr>' + '<td>' + a[i][1] + '</td>' + '</tr>';
-        }
 
     </script>
 </body>
