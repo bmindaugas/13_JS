@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Automobiliai</title>
-
 </head>
 
 <body>
-    
     <table border="1">
         <thead>
             <tr>
@@ -26,28 +24,21 @@
 
     <script>
         var autos = ['2017-07-06 19:59:45', 'ABC123', 100044, 3600];
-        
-        autos[4] = prideti(autos);        
-
+        autos[4] = prideti(autos);
         aLen = autos.length;
         var text = "<tr>";
         for (var i = 0; i < aLen; i++) {
-            
             text += "<td>" + autos[i] + "</td>";
         }
-
-        function prideti(au) {            
-
+        function prideti(au) {
             let speed = au[3] * au[2] / 3600000;
             speed = Math.round(speed);
             return speed;
         }
-        
         text += "</tr>";
-       
-        document.getElementById("autom").innerHTML = text;        
-       
+        document.getElementById("autom").innerHTML = text;
     </script>
+
 </body>
 
 </html>
