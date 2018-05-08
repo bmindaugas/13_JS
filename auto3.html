@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Automobiliai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" />
+
+    <style>
+        table {
+            border-color: black;
+            border-collapse: collapse;
+        }
+
+        th {
+            width: 20vw;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="t1" border="">
+        <thead>
+            <tr id="auto1">
+                <th>Data</th>
+                <th>VN</th>
+                <th>Metrai</th>
+                <th>Sekundes</th>
+                <th>Km/H</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+
+        var a = [
+            [
+                '2017-07-06 02:49:45',
+                'AAS211',
+                100000,
+                3600
+            ],
+
+            [
+                '2017-07-06 14:49:42',
+                'GFD123',
+                440000,
+                3600
+            ],
+            [
+                '2018-01-01 16:52:02',
+                'FFF023',
+                500058,
+                1000
+            ],
+            [
+                '2018-01-02 10:58:20',
+                'SDB023',
+                50088,
+                9900
+            ],
+            [
+                '2018-01-02 07:59:44',
+                'GFB443',
+                50855,
+                5888
+            ],
+            [
+                '2018-01-02 07:38:50',
+                'HHH666',
+                50554,
+                9556
+            ],
+            [
+                '2018-01-02 07:53:07',
+                'ERT654',
+                50444,
+                9077
+            ],
+            [
+                '2018-01-02 20:50:15',
+                'ASD987',
+                50770,
+                904
+            ],
+            [
+                '2018-01-03 09:34:50',
+                'AAA123',
+                50004,
+                1010
+            ]
+        ]
+
+        var table = document.getElementById("t1");
+
+        for (var i = 0; i < a.length; i++) {
+            var row = table.insertRow(-1);
+
+            var data = row.insertCell(-1);
+            data.appendChild(document.createTextNode(a[i][0]));
+
+            var VN = row.insertCell(-1);
+            VN.appendChild(document.createTextNode(a[i][1]));
+
+            var Metrai = row.insertCell(-1);
+            Metrai.appendChild(document.createTextNode(a[i][2]));
+
+            var Sekundes = row.insertCell(-1);
+            Sekundes.appendChild(document.createTextNode(a[i][3]));
+
+            var kmH = row.insertCell(-1);
+            kmH.appendChild(document.createTextNode((a[i][3] * a[i][2]) / 3600000 + 'km/H'));
+        }
+    </script>
+
+</body>
+
+</html>
